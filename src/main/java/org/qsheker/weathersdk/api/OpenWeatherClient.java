@@ -1,4 +1,4 @@
 package org.qsheker.weathersdk.api;
 
-public class WeatherController {
+public class OpenWeatherClient {
 }
