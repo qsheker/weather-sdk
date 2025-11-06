@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import java.time.LocalDateTime;
+import java.time.Instant;
 
 
 @Data
@@ -25,4 +25,6 @@ public class WeatherData {
     private Long timezone;
     private Long dateTime;
     private Long cityId;
+    private Instant lastUpdated;
+
 }
