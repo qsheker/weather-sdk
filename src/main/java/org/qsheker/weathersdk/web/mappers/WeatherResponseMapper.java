@@ -36,33 +36,4 @@ public class WeatherResponseMapper implements Mapper<WeatherData, WeatherRespons
                 .timezone(from.getTimezone())
                 .build();
     }
-
-    @Override
-    public WeatherData toObject(WeatherResponseDto to) {
-        if (to == null) {
-            return null;
-        }
-        WeatherData weatherData = new WeatherData();
-        weatherData.setCityName(to.getName());
-        weatherData.setVisibility(to.getVisibility());
-        weatherData.setTimezone(to.getTimezone());
-        weatherData.setDateTime(to.getDateTime());
-
-        if (to.getWeather() != null) {
-            weatherData.setWeatherMain(to.getWeather().getMain());
-            weatherData.setWeatherDescription(to.getWeather().getDescription());
-        }
-        if (to.getTemperature() != null) {
-            weatherData.setTemperature(to.getTemperature().getTemp());
-            weatherData.setFeelsLike(to.getTemperature().getFeels_like());
-        }
-        if (to.getWind() != null) {
-            weatherData.setWindSpeed(to.getWind().getSpeed());
-        }
-        if (to.getSys() != null) {
-            weatherData.setSunrise(to.getSys().getSunrise());
-            weatherData.setSunset(to.getSys().getSunset());
-        }
-        return weatherData;
-    }
 }
