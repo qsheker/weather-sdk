@@ -94,16 +94,16 @@ name: City name
 
 Spring Boot Usage:
 -----------------
-```yaml
 application.yml:
+```yaml
 weather:
   sdk:
     api-key: "your-api-key-here"
     mode: ON_DEMAND
 ```
 
-```java
 WeatherController.java:
+```java
 @RestController
 @RequestMapping("/api/weather")
 public class WeatherController {
